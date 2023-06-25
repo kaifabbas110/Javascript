@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: orangered;
+  /* min-height: 100vh; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* max-height: 100vw; */
+  /* min-width: 100vw; */
+  /* overflow-x: scroll; */
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin: auto;
+  border: white;
+}
+.countries {
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 4rem;
+  justify-content: center;
+  /* text-align: center; */
+  /* align-items: center; */
+
+  @media only screen and (min-width: 110.5em) {
+    grid-template-columns: repeat(5, auto);
+  }
+  @media only screen and (max-width: 93.75em) {
+    grid-template-columns: repeat(3, auto);
+  }
+  @media only screen and (max-width: 75em) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @media only screen and (max-width: 43.75em) {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.country_card {
+  background-color: white;
+  max-width: 30rem;
+  /* box-shadow: 0.2rem 0.2rem 1rem 0.1rem black; */
+  border-radius: 1rem;
+  /* height: max-content; */
+  /* width: max-content; */
+  border: 2px solid black;
+  position: relative;
+}
+
+.neighbour::before {
+  content: "Neighbour country";
+  width: 100%;
+  position: absolute;
+  top: -4rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.neighbour {
+  color: #888;
+  /* background-color: yellow; */
+  transform: scale(0.8) translateY(1rem);
+  margin-left: 0;
+}
+.country_img {
+  height: 20rem;
+  width: 30rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  /* z-index: 99; */
+  /* border: 2px solid black; */
+  border-bottom: 2px solid black;
+  /* background-position: top; */
+  /* background-size: cover; */
+  /* object-fit: cover; */
+  /* min-width: min-content; */
+}
+
+.country_data {
+  margin: 2rem 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+p {
+  font-size: 1.5rem;
+}
+p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+span {
+  margin-right: 1rem;
+}
